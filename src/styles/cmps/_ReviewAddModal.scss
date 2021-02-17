@@ -1,0 +1,34 @@
+.review-add-modal {
+    height: 100%;
+    padding: 25px;
+
+    // .top-container {
+    //     input[type="radio"] {
+    //         display: none;
+    //         &:not(:last-of-type) {
+    //             // margin-inline-end: 10px;
+    //         }
+    //         &:checked {
+    //         }
+    //     }
+    //     label {
+    //         font-size: 1.75em;
+    //     }
+    // }
+    textarea {
+        height: 60%;
+        resize: none;
+    }
+    .btn-group {
+        align-self: flex-end;
+        .btn-back {
+            border: none;
+            background-color: transparent;
+            margin-inline-end: 30px;
+        }
+        .btn-post {
+            background-color: $clr1;
+            color: white;
+        }
+    }
+}

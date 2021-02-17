@@ -1,0 +1,72 @@
+.book-details {
+    padding-top: 20px;
+    margin-block-end: 50px;
+
+    > div:first-of-type {
+        gap: 3rem;
+        @media (max-width: $narrow-breakpoint) {
+            flex-direction: column;
+        }
+    }
+
+    .title {
+        font-size: 2em;
+        margin-block-end: 15px;
+    }
+    .authors {
+        list-style: circle;
+        padding-inline-start: 20px;
+    }
+    > div:first-of-type {
+        margin-block-end: 75px;
+    }
+
+    .info-container {
+        *:not(:last-child) {
+            margin-block-end: 20px;
+        }
+        small:first-of-type {
+            margin-block-end: 10px;
+        }
+        .description {
+            font-size: 1.1em;
+        }
+        .categories-container {
+            margin-block-end: 20px;
+            * {
+                display: inline;
+            }
+            .categories {
+                font-size: 0.85em;
+                padding: 0;
+                &:not(:last-of-type) {
+                    margin-inline-end: 15px;
+                }
+            }
+        }
+        .price-container label {
+            min-width: 50px;
+        }
+        .btn-back {
+            align-self: flex-end;
+            background-color: $clr2;
+            color: white;
+        }
+    }
+
+    .review-top-container {
+        h3 {
+            margin-inline-end: 25px;
+        }
+        .btn-add-review {
+            background-color: $clr1;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+    }
+    .no-reviews-yet {
+        margin-block-start: 15px;
+    }
+}

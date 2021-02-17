@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+        font-family: montserrat, sans-serif;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: libre-franklin;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+
+            &.my-btn {
+                width: fit-content;
+                border: none;
+                // border-radius: 3px;
+                height: 40px;
+                width: 100px;
+                font-weight: 600;
+                font-size: 1em;
+            }
+        }
+
+        input {
+            padding: 0.9em 2.2em;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        input,
+        textarea {
+            caret-color: $clr2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}

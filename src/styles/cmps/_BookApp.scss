@@ -1,0 +1,14 @@
+.book-app {
+    i.arrow {
+        margin-inline-start: 8px;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        .top-container {
+            flex-direction: column;
+            > * {
+                margin-block-end: 15px;
+            }
+        }
+    }
+}

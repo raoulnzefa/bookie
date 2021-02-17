@@ -1,0 +1,11 @@
+.review-preview {
+    margin: 20px 0;
+    > * {
+        display: block;
+        margin-block-end: 5px;
+    }
+    .rating-txt {
+        font-size: 0.75em;
+        transform: translateY(-2px);
+    }
+}

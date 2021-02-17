@@ -1,0 +1,115 @@
+.book-preview {
+    margin: 35px 0;
+
+    .img-container {
+        position: relative;
+
+        img {
+            transition: opacity 0.2s;
+            &:hover {
+                opacity: 0.2;
+            }
+        }
+        > div {
+            background-color: #409dbdd4;
+            height: 140px;
+            width: 90px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            shape-outside: polygon(0 0, 100% 0, 100% 50%, 50% 25%, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 25%, 0 0, 0 0, 0 0, 0 0);
+            label {
+                display: block;
+                margin: 15px 45px;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &.disp-list {
+        max-height: 300px;
+        .img-container {
+            margin-inline-end: 35px;
+            max-height: inherit;
+            img {
+                max-height: inherit;
+            }
+        }
+        @media (max-width: $narrow-breakpoint) {
+            max-height: 150px;
+            .description {
+                display: none;
+            }
+            .img-container {
+                > div {
+                    height: 120px;
+                    width: 70px;
+                    label {
+                        margin: 15px 35px;
+                        transform: translateY(-15px) rotate(45deg);
+                    }
+                }
+            }
+        }
+        @media (max-width: $mobile-breakpoint) {
+            max-height: 100px;
+            .title-container .title {
+                font-size: 1.35em;
+            }
+            .book-length {
+                display: none;
+            }
+            .authors {
+                flex: 1;
+            }
+            .price,
+            aside {
+                font-size: 1em;
+            }
+        }
+    }
+    &.disp-grid {
+        .img-container {
+            img {
+                width: 100%;
+            }
+        }
+        .description {
+            margin-block-end: 20px;
+        }
+    }
+
+    aside {
+        color: $clr1;
+        font-weight: 600;
+    }
+
+    .title-container {
+        * {
+            margin-block-end: 10px;
+        }
+        .title {
+            font-size: 2em;
+            font-family: monospace;
+        }
+    }
+    .price {
+        font-size: 1.15em;
+    }
+    .authors {
+        list-style: circle;
+        padding-inline-start: 20px;
+        margin-block-end: 25px;
+    }
+    .book-length {
+        margin-block-end: 20px;
+    }
+    .seperator {
+        &.horizontal {
+            margin-inline-start: 25px;
+            margin-inline-end: 25px;
+        }
+    }
+}
