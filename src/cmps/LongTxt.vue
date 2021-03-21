@@ -12,7 +12,9 @@
 
 <script>
 export default {
-  props: ['txt'],
+  props: {
+    txt: String,
+  },
   data() {
     return {
       isLongTxtShown: false,

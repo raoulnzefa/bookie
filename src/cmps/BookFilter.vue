@@ -6,7 +6,9 @@
 
 <script>
 export default {
-  props: ['initialStr'],
+  props: {
+    initialStr: String,
+  },
   data() {
     return {
       filterBy: {

@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-import bookModule from './modules/book.module'
+import bookModule from './modules/bookModule.js'
 export default new Vuex.Store({
   strict: true,
   modules: {
@@ -29,15 +29,14 @@ export default new Vuex.Store({
     },
     userMsg(state) {
       return state.userMsg
-    }
+    },
   },
   mutations: {
     setLoggedInUser(state, { user }) {
       state.loggedInUser = user
     },
     setUserMsg(state, { userMsg }) {
-      state.userMsg.type = userMsg.type;
-      state.userMsg.txt = userMsg.txt;
+      state.userMsg = userMsg
     },
   },
   actions: {
@@ -51,7 +50,7 @@ export default new Vuex.Store({
             txt: '',
           }
         })
-      }, 8000);
+      }, 5000);
     },
   },
 })

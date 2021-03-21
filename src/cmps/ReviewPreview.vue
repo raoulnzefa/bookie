@@ -21,6 +21,8 @@ export default {
   components: {
     StarRating,
   },
-  props: ['review'],
+  props: {
+    review: Object,
+  },
 }
 </script>

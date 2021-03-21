@@ -37,8 +37,9 @@
 
 <script>
 import LongTxt from './LongTxt.vue'
-import bookService from '@/services/bookService.js'
+import bookMixin from '@/mixins/bookMixin.js'
 export default {
+  mixins: [bookMixin],
   props: {
     book: Object,
     displayStyle: String,
@@ -51,18 +52,18 @@ export default {
       return this.displayStyle === 'list' ? 'disp-list' : 'disp-grid col'
     },
     currency() {
-      return bookService.getCurrency(this.book.listPrice.currencyCode)
+      return this.getCurrency(this.book.listPrice.currencyCode)
     },
     age() {
-      return bookService.defineAge(this.book.publishedDate)
+      return this.defineAge(this.book.publishedDate)
     },
     readLength() {
-      return bookService.getReadLength(this.book.pageCount)
+      return this.getReadLength(this.book.pageCount)
     },
   },
   setup() {
     return {
-      bookService,
+      bookMixin,
     }
   },
 }

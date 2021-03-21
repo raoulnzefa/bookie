@@ -8,7 +8,9 @@
 <script>
 import ReviewPreview from './ReviewPreview.vue'
 export default {
-  props: ['reviews'],
+  props: {
+    reviews: Array,
+  },
   components: {
     ReviewPreview,
   },

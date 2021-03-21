@@ -7,13 +7,18 @@
 <script>
 import BookPreview from './BookPreview.vue'
 export default {
-  props: ['books', 'displayStyle'],
+  props: {
+    books: Array,
+    displayStyle: String,
+  },
   components: {
     BookPreview,
   },
   computed: {
     displayClass() {
-      return this.displayStyle === 'list' ? 'disp-list' : 'disp-grid grid j-center'
+      return this.displayStyle === 'list'
+        ? 'disp-list'
+        : 'disp-grid grid j-center'
     },
   },
 }

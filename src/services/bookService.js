@@ -10,9 +10,6 @@ export default {
     remove,
     save,
     getEmptyBook,
-    getCurrency,
-    getReadLength,
-    defineAge
 }
 
 async function query() {
@@ -38,30 +35,6 @@ function remove(id) {
 function save(book) {
     if (book._id) return dbService.put(KEY, book);
     else return dbService.post(KEY, book)
-}
-
-function getCurrency(currCode) {
-    currCode.toUpperCase()
-    switch (currCode) {
-        case 'ILS':
-            return '₪'
-        case 'EUR':
-            return '€'
-        case 'USD':
-            return '$'
-        default:
-            return
-    }
-}
-function getReadLength(pageCount) {
-    if (pageCount > 500) return 'Long Reading'
-    else if (pageCount > 200) return 'Decent Reading'
-    else return 'Light Reading'
-}
-function defineAge(publishYear) {
-    const currYear = new Date().getFullYear()
-    if (currYear - publishYear > 10) return 'Veteran Book'
-    else if (currYear - publishYear < 1) return 'New!'
 }
 
 function getEmptyBook() {

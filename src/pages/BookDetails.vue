@@ -46,9 +46,10 @@
 <script>
 import ReviewList from '@/cmps/ReviewList.vue'
 import ReviewAddModal from '@/cmps/ReviewAddModal.vue'
-import bookService from '@/services/bookService.js'
+import bookMixin from '@/mixins/bookMixin.js'
 import utilService from '@/services/utilService.js'
 export default {
+  mixins: [bookMixin],
   components: {
     ReviewList,
     ReviewAddModal,
@@ -58,13 +59,13 @@ export default {
       return this.$store.getters.selectedBook
     },
     currency() {
-      return bookService.getCurrency(this.book.listPrice.currencyCode)
+      return this.getCurrency(this.book.listPrice.currencyCode)
     },
     age() {
-      return bookService.defineAge(this.book.publishedDate)
+      return this.defineAge(this.book.publishedDate)
     },
     readLength() {
-      return bookService.getReadLength(this.book.pageCount)
+      return this.getReadLength(this.book.pageCount)
     },
   },
   methods: {
