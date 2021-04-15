@@ -9,7 +9,9 @@
       </router-link>
       <nav>
         <ul class="clean-list">
-          <router-link to="/about">About</router-link>
+          <li>
+            <router-link to="/about" active-class="active-link">About</router-link>
+          </li>
         </ul>
       </nav>
     </section>

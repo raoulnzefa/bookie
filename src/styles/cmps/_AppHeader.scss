@@ -23,7 +23,7 @@
         height: inherit;
         .logo-container {
             .logo {
-                background: url('../assets/imgs/book-logo.png');
+                background: url("../assets/imgs/book-logo.png");
                 background-size: contain;
                 height: 50px;
                 width: 50px;
@@ -32,6 +32,16 @@
         }
         p {
             font-size: 1.75em;
+        }
+        li a {
+            transition: color 0.1s, font-weight 0.1s;
+            &.active-link {
+                color: #778899;
+                font-weight: 500;
+                &::before {
+                    content: "• ";
+                }
+            }
         }
     }
 }
