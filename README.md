@@ -1,4 +1,4 @@
-# vue-proj
+# Bookie
 
 ## Project setup
 ```
